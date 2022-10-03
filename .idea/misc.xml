@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/MusatovDA/AndroidStudioProjects/BPConnect/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/MusatovDA/AndroidStudioProjects/BPConnect/app/src/main/res/drawable/ic_guap_main.xml" value="0.2095" />
+        <entry key="..\:/Users/MusatovDA/AndroidStudioProjects/BPConnect/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/MusatovDA/AndroidStudioProjects/BPConnect/app/src/main/res/layout/bt_list_items.xml" value="0.20208333333333334" />
       </map>
     </option>
   </component>

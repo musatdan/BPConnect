@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".FindingActivity">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -29,7 +29,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Список найденных тонометров"
+        android:text="Список найденных устройств"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +56,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:minHeight="64dp"
+        android:onClick="Connect_OnClick"
         android:text="Подключиться"
         app:layout_constraintBottom_toTopOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,6 +70,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:minHeight="64dp"
+        android:onClick="Find_Bt_Devices_OnClick"
         android:text="Поиск устройств"
         app:layout_constraintBottom_toTopOf="@+id/button_connect"
         app:layout_constraintEnd_toEndOf="parent"

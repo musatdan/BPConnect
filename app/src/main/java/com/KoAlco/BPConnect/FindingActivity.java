@@ -95,7 +95,7 @@ public class FindingActivity extends AppCompatActivity {
         @Override
         public void onDisconnectedPeripheral(@NotNull BluetoothPeripheral peripheral, @NotNull HciStatus status) {
             super.onDisconnectedPeripheral(peripheral, status);
-            EventBus.getDefault().post(new MessageEvent("BLE Disconnected"));
+            EventBus.getDefault().post(new MessageEvent("BLE Disconnected", 0));
         }
 
         @Override

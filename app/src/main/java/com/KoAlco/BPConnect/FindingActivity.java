@@ -24,6 +24,7 @@ import com.welie.blessed.BluetoothCentralManagerCallback;
 import com.welie.blessed.BluetoothPeripheral;
 import com.welie.blessed.HciStatus;
 import com.welie.blessed.ScanFailure;
+import com.welie.blessed.ScanMode;
 
 import org.greenrobot.eventbus.EventBus;
 import org.jetbrains.annotations.NotNull;
@@ -52,7 +53,7 @@ public class FindingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_finding);
 
     bluetoothAdapter = bluetoothAdapter.getDefaultAdapter();
     ((BluetoothApp) getApplication()).setBt_callback(btCentralManagerCallback);
@@ -95,7 +96,7 @@ public class FindingActivity extends AppCompatActivity {
         @Override
         public void onDisconnectedPeripheral(@NotNull BluetoothPeripheral peripheral, @NotNull HciStatus status) {
             super.onDisconnectedPeripheral(peripheral, status);
-            EventBus.getDefault().post(new MessageEvent("BLE Disconnected"));
+            EventBus.getDefault().post(new MessageEvent("BLE Disconnected", 0));
         }
 
         @Override
@@ -165,6 +166,8 @@ public class FindingActivity extends AppCompatActivity {
 
             Toast.makeText(this, "Сканирование...", Toast.LENGTH_SHORT).show();
             scanning = true;
+
+            btManager.setScanMode(ScanMode.OPPORTUNISTIC);
             btManager.scanForPeripherals();
         } else {
             Toast.makeText(this, "Сканирование остановлено", Toast.LENGTH_SHORT).show();

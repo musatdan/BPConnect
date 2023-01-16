@@ -167,7 +167,6 @@ public class FindingActivity extends AppCompatActivity {
             Toast.makeText(this, "Сканирование...", Toast.LENGTH_SHORT).show();
             scanning = true;
 
-            btManager.setScanMode(ScanMode.OPPORTUNISTIC);
             btManager.scanForPeripherals();
         } else {
             Toast.makeText(this, "Сканирование остановлено", Toast.LENGTH_SHORT).show();
